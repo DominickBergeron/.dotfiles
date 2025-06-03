@@ -352,4 +352,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -e /home/dominick/.nix-profile/etc/profile.d/nix.sh ]; then . /home/dominick/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+
 
