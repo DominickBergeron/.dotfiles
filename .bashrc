@@ -82,6 +82,8 @@ fi
 
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+export NIXPKGS_ALLOW_UNFREE=1
+
 if [ -e $HOME/lnix.sh ]; then . $HOME/lnix.sh; fi 
 
 if [[ -n $PS1 && -f ~/.bash_prompt ]]; then
