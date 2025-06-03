@@ -69,6 +69,15 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Easy nix install alias
+install() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: install <package-name>"
+        return 1
+    fi
+    nix-env -iA "nixpkgs.$1"
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -90,7 +99,7 @@ if [[ -n $PS1 && -f ~/.bash_prompt ]]; then
   . ~/.bash_prompt
   # Change prompt theme here if you want
   ps1_colorful_theme
-  fi
+fi
 
 
 
